@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Traductions>
+  <Parametre Separateur="\">
+    <Proprietes>
+      <Propriete>Caption</Propriete>
+      <Propriete>Text</Propriete>
+      <Propriete>Hint</Propriete>
+      <Propriete>Items</Propriete>
+    </Proprietes>
+  </Parametre>
+  <Langues>
+    <Langue index="FR" name="FrenchLang" default="1" />
+    <Langue index="EN" name="EnglishLang" default="0" />
+    <Langue index="ES" name="SpanishLang" default="0" />
+  </Langues>
+  <Labels>
+    <Popup type="TComboBox">
+      <Items>
+        <FR>Le fichier scratch2.bat n'existe pas.\Le fichier scratch2.bat n'existe pas.\Le fichier s2aio_cmd.bat n'existe pas.\Le numéro du port COM doit être un entier.\Interface réalisée par Sébastien Canet, décembre 2015 - v1 - décembre 2015\Carte Arduino mal connectée ou non reconnue,\vérifiez dans le gestionnaire de périphériques,\accessible depuis le menu 'Outils'.</FR>
+        <EN>The file 'scratch2.bat' does not exist.\The file 'scratch2.bat' does not exist.\The file 's2aio_cmd.bat' does not exist.\#COM port must be an integer.\Software created by Sébastien Canet, december 2015 - v1 - december 2015\The Arduino card is not connected,\vérify in the 'Device Management',\shortcut is the 'Tools' menu.</EN>
+		<ES>El fichero 'scratch2.bat'no existe.\El fichero 'scratch2.bat' no existe.\El fichero 's2aio_cmd.bat' no existe.\El número de puerto #COM debe ser un entero.\Software creado por Sébastien Canet, diciembre 2015 - v1 - diciembre 2015\The Arduino card is not connected,\vérify in the 'Device Management',\shortcut is the 'Tools' menu.</ES>
+      </Items>
+    </Popup>
+    <InterfaceS2A type="TFenetrePrincipale">
+      <Caption>
+        <FR>Panneau de contrôle s2aio</FR>
+        <EN>s2aio control panel</EN>
+        <ES>s2aio panel de control</ES>
+      </Caption>
+    </InterfaceS2A>
+    <Label1 type="TLabel">
+      <Caption>
+        <FR>Votre carte Arduino</FR>
+        <EN>Your Arduino card</EN>
+        <ES>Su tarjeta Arduino</ES>
+      </Caption>
+    </Label1>
+    <Label2 type="TLabel">
+      <Caption>
+        <FR>est connectée sur</FR>
+        <EN>is connected as</EN>
+        <ES>esta conecatad en</ES>
+      </Caption>
+    </Label2>
+    <Label3 type="TLabel">
+      <Caption>
+        <FR>le port COM</FR>
+        <EN>COM port #</EN>
+        <ES>el puerto COM</ES>
+      </Caption>
+    </Label3>
+    <Label4 type="TLabel">
+      <Caption>
+        <FR>La fenêtre se fermera s'il y a un problème de port</FR>
+        <EN>The pop-up window will close if there's a COM problem</EN>
+        <ES>La ventana emergente se cerrara si hay un problema COM</ES>
+      </Caption>
+    </Label4>
+    <Label5 type="TLabel">
+      <Caption>
+        <FR>ou bien si la carte Arduino est mal programmée.</FR>
+        <EN>or if the Arduino card is not uploaded correctly.</EN>
+        <ES>o si la tarjeta Arduino no se carga correctamente.</ES>
+      </Caption>
+    </Label5>
+    <Button1 type="TButton">
+      <Caption>
+        <FR>Lancer s2aio</FR>
+        <EN>Launch s2aio</EN>
+        <ES>Lanzar s2aio</ES>
+      </Caption>
+    </Button1>
+    <Button2 type="TButton">
+      <Caption>
+        <FR>Lancer Scratch2</FR>
+        <EN>Launch Scratch2</EN>
+        <ES>Lanzar Scratch2</ES>
+      </Caption>
+    </Button2>
+    <ScratchEnLigne type="TButton">
+      <Caption>
+        <FR>Scratch2 en ligne</FR>
+        <EN>Scratch2 online</EN>
+        <ES>Scratch2 en linea</ES>
+      </Caption>
+    </ScratchEnLigne>
+    <Langue1 type="TMenuItem">
+      <Caption>
+        <FR>&Langues</FR>
+        <EN>&Languages</EN>
+        <ES>&Lenguajes</ES>
+      </Caption>
+    </Langue1>
+    <FrenchLang type="TMenuItem">
+      <Caption>
+        <FR>Français</FR>
+        <EN>French</EN>
+        <ES>Françes</ES>
+      </Caption>
+    </FrenchLang>
+    <EnglishLang type="TMenuItem">
+      <Caption>
+        <FR>Anglais</FR>
+        <EN>English</EN>
+        <ES>Englices</ES>
+      </Caption>
+    </EnglishLang>
+    <SpanishLang type="TMenuItem">
+      <Caption>
+        <FR>Espagnol</FR>
+        <EN>Spanish</EN>
+        <ES>Espanol</ES>
+      </Caption>
+    </SpanishLang>
+    <Fichier type="TMenuItem">
+      <Caption>
+        <FR>&Fichier</FR>
+        <EN>&File</EN>
+        <ES>&Archivo</ES>
+      </Caption>
+    </Fichier>
+			<Bibliothque type="TMenuItem">
+			  <Caption>
+				<FR>B&ibliothèque</FR>
+				<EN>L&ibrairie</EN>
+				<ES>L&ibrerias</ES>
+			  </Caption>
+			</Bibliothque>
+			<ExemplesScratch2 type="TMenuItem">
+			  <Caption>
+				<FR>&Projets Scratch2</FR>
+				<EN>&Project Scratch2</EN>
+				<ES>&Proyecto Scratch2</ES>
+			  </Caption>
+			</ExemplesScratch2>
+			<Quitter1 type="TMenuItem">
+			  <Caption>
+				<FR>&Quitter</FR>
+				<EN>&Quit</EN>
+				<ES>&Salir</ES>
+			  </Caption>
+			</Quitter1>
+    <Outils1 type="TMenuItem">
+      <Caption>
+        <FR>&Outils</FR>
+        <EN>T&ools</EN>
+        <ES>H&erramientas</ES>
+      </Caption>
+    </Outils1>
+			<Gestionnairedepriphriques1 type="TMenuItem">
+			  <Caption>
+				<FR>Gestio&nnaire de périphériques</FR>
+				<EN>Device ma&nagement</EN>
+				<ES>Gestion de p&eriféricos</ES>
+			  </Caption>
+			</Gestionnairedepriphriques1>
+			<InstallDriver type="TMenuItem">
+			  <Caption>
+				<FR>&Installer les pilotes</FR>
+				<EN>&Install drivers</EN>
+				<ES>&Instalar drivers</ES>
+			  </Caption>
+			</InstallDriver>
+					<w32 type="TMenuItem">
+					  <Caption>
+						<FR>&Windows 32bits x86</FR>
+						<EN>&Windows 32bits x86</EN>
+						<ES>&Windows 32bits x86</ES>
+					  </Caption>
+					</w32>
+					<w64 type="TMenuItem">
+					  <Caption>
+						<FR>&Windows 64bits x64</FR>
+						<EN>&Windows 64bits x64</EN>
+						<ES>&Windows 64bits x64</ES>
+					  </Caption>
+					</w64>
+			<Firmata type="TMenuItem">
+			  <Caption>
+				<FR>Téléverser 'FirmataPlus' dans une Arduino/Genuino</FR>
+				<EN>Upload 'FirmataPlus' in Arduino/Genuino</EN>
+				<ES>Descargar 'Firmata' en una Arduino/Genuino</ES>
+			  </Caption>
+			</Firmata>	
+					<Firmata_Leonardo type="TMenuItem">
+					  <Caption>
+						<FR>Leonardo</FR>
+						<EN>Leonardo</EN>
+						<ES>Leonardo</ES>
+					  </Caption>
+					</Firmata_Leonardo>
+					<Firmata_Mega type="TMenuItem">
+					  <Caption>
+						<FR>Mega (2560)</FR>
+						<EN>Mega (2560)</EN>
+						<ES>Mega (2560)</ES>
+					  </Caption>
+					</Firmata_Mega>
+					<Firmata_Micro type="TMenuItem">
+					  <Caption>
+						<FR>Micro</FR>
+						<EN>Micro</EN>
+						<ES>Micro</ES>
+					  </Caption>
+					</Firmata_Micro>
+					<Firmata_Nano type="TMenuItem">
+					  <Caption>
+						<FR>Nano</FR>
+						<EN>Nano</EN>
+						<ES>Nano</ES>
+					  </Caption>
+					</Firmata_Nano>	
+					<Firmata_Uno type="TMenuItem">
+					  <Caption>
+						<FR>Uno</FR>
+						<EN>Uno</EN>
+						<ES>Uno</ES>
+					  </Caption>
+					</Firmata_Uno>
+			<Locate type="TMenuItem">
+			  <Caption>
+				<FR>&Localiser les dossiers</FR>
+				<EN>&Locate folders</EN>
+				<ES>&Localizar carpetas</ES>
+			  </Caption>
+			</Locate>
+					<Ouvrir type="TMenuItem">
+					  <Caption>
+						<FR>Localiser Scratch 2</FR>
+						<EN>Locate Scratch2</EN>
+						<ES>Localizar Scratch2</ES>
+					  </Caption>
+					</Ouvrir>
+					<Localiserledossierexemples1 type="TMenuItem">
+					  <Caption>
+						<FR>Localiser le dossier 'bibliothèque'</FR>
+						<EN>Locate folder 'librairie'</EN>
+						<ES>Localizar carpeta de 'libreria'</ES>
+					  </Caption>
+					</Localiserledossierexemples1>
+					<Localiserledossierprojets1 type="TMenuItem">
+					  <Caption>
+						<FR>Localiser le dossier 'projets'</FR>
+						<EN>Locate folder 'project'</EN>
+						<ES>Localizar carpeta de 'proyectos'</ES>
+					  </Caption>
+					</Localiserledossierprojets1>
+					<Localiserledossierdocumentation1 type="TMenuItem">
+					  <Caption>
+						<FR>Localiser le dossier 'documentation'</FR>
+						<EN>Locate folder 'documentation'</EN>
+						<ES>Localizar carpeta de 'documentacion'</ES>
+					  </Caption>
+					</Localiserledossierdocumentation1>
+					<Drivers type="TMenuItem">
+					  <Caption>
+						<FR>Ouvrir le dossier 'pilotes'</FR>
+						<EN>Open 'drivers' folder</EN>
+						<ES>Abrir carpeta de 'drivers'</ES>
+					  </Caption>
+					</Drivers>
+			<Init type="TMenuItem">
+			  <Caption>
+				<FR>Réinitialiser les p&aramètres</FR>
+				<EN>Initialise p&arameters</EN>
+				<ES>Inicializar los p&arametros</ES>
+			  </Caption>
+			</Init>		
+    <Documentation1 type="TMenuItem">
+      <Caption>
+        <FR>&Documentation</FR>
+        <EN>&Documentation</EN>
+        <ES>&Documentacion</ES>
+      </Caption>
+    </Documentation1>
+    <BlocklyArduino type="TMenuItem">
+      <Caption>
+        <FR>Aller plus loin avec &Blockly@rduino</FR>
+        <EN>Go furthermore with &Blockly@rduino</EN>
+        <ES>Ademas con &Blockly@rduino</ES>
+      </Caption>
+    </BlocklyArduino>
+			<SiteBlocklyrduino type="TMenuItem">
+			  <Caption>
+				<FR>Blockly@rduino en ligne</FR>
+				<EN>Blockly@rduino online</EN>
+				<ES>Blockly@rduino online</ES>
+			  </Caption>
+			</SiteBlocklyrduino>
+			<Pymatapourlasupervision type="TMenuItem">
+			  <Caption>
+				<FR>Pymata pour la supervision</FR>
+				<EN>Pymata for supervision</EN>
+				<ES>Pymata for supervision</ES>
+			  </Caption>
+			</Pymatapourlasupervision>
+    <Aide1 type="TMenuItem">
+      <Caption>
+        <FR>&Aide</FR>
+        <EN>&Help</EN>
+        <ES>&Ayuda</ES>
+      </Caption>
+    </Aide1>
+			<PrparerArduino1 type="TMenuItem">
+			  <Caption>
+				<FR>&1. Préparer la carte Arduino</FR>
+				<EN>&1. prepare Arduino card</EN>
+				<ES>&1. Preparar la tarjeta Arduino</ES>
+			  </Caption>
+			</PrparerArduino1>
+			<Utilisation1 type="TMenuItem">
+			  <Caption>
+				<FR>&2. Utilisation de s2aio</FR>
+				<EN>&2. how to use s2aio</EN>
+				<ES>&2. Utilizacion de s2aio</ES>
+			  </Caption>
+			</Utilisation1>
+			<N4Principesdeprogrammation1 type="TMenuItem">
+			  <Caption>
+				<FR>&3. Principes de programmation</FR>
+				<EN>&3. the best way to code</EN>
+				<ES>&3. Principios de programacion</ES>
+			  </Caption>
+			</N4Principesdeprogrammation1>
+			<N3Mmentodescommandes1 type="TMenuItem">
+			  <Caption>
+				<FR>&4. Mémento des commandes</FR>
+				<EN>&4. s2aio command summary</EN>
+				<ES>&4. Aviso de ordenes</ES>
+			  </Caption>
+			</N3Mmentodescommandes1>
+			<Links type="TMenuItem">
+			  <Caption>
+				<FR>&Liens</FR>
+				<EN>&Links</EN>
+				<ES>&Enlaces</ES>
+			  </Caption>
+			</Links>
+					<Wiki1 type="TMenuItem">
+					  <Caption>
+						<FR>Wiki</FR>
+						<EN>Wiki</EN>
+						<ES>Wiki</ES>
+					  </Caption>
+					</Wiki1>
+					<A_propos type="TMenuItem">
+					  <Caption>
+						<FR>Fichiers source</FR>
+						<EN>Github file</EN>
+						<ES>Ficheros fuente Github</ES>
+					  </Caption>
+					</A_propos>
+					<Siteofficieldes2aio1 type="TMenuItem">
+					  <Caption>
+						<FR>Site officiel de s2aio</FR>
+						<EN>s2aio official site</EN>
+						<ES>Sitio oficial de s2aio</ES>
+					  </Caption>
+					</Siteofficieldes2aio1>
+					<SiteofficielArduino1 type="TMenuItem">
+					  <Caption>
+						<FR>Site officiel Arduino</FR>
+						<EN>Arduino official site</EN>
+						<ES>Sitio oficial de Arduino</ES>
+					  </Caption>
+					</SiteofficielArduino1>
+					<lchargerlesdrivers1 type="TMenuItem">
+					  <Caption>
+						<FR>Télécharger les pilotes</FR>
+						<EN>Download Arduino drivers</EN>
+						<ES>Cargar drivers de Arduino</ES>
+					  </Caption>
+					</lchargerlesdrivers1>
+					<DlScratch2 type="TMenuItem">
+					  <Caption>
+						<FR>Télécharger Scratch2 hors ligne</FR>
+						<EN>Download offline Scratch2</EN>
+						<ES>Cargar Scratch2</ES>
+					  </Caption>
+					</DlScratch2>
+			<Apropos1 type="TMenuItem">
+			  <Caption>
+				<FR>A propos</FR>
+				<EN>About</EN>
+				<ES>Acerca de</ES>
+			  </Caption>
+			</Apropos1>
+  </Labels>
+</Traductions>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2015/12/20 20:39:52.240.cpp,F:\ZZZzzz\Projets Borland Studio\Unit1.cpp=F:\ZZZzzz\Projets Borland Studio\s2aio_cp\Unit1.cpp</Transaction>
+    <Transaction>2015/12/20 20:39:52.240.h,F:\ZZZzzz\Projets Borland Studio\Unit1.h=F:\ZZZzzz\Projets Borland Studio\s2aio_cp\Unit1.h</Transaction>
+    <Transaction>2015/12/20 20:39:52.240.dfm,F:\ZZZzzz\Projets Borland Studio\Unit1.dfm=F:\ZZZzzz\Projets Borland Studio\s2aio_cp\Unit1.dfm</Transaction>
+    <Transaction>2015/12/20 20:39:57.982.bdsproj,F:\ZZZzzz\Projets Borland Studio\Project1.bdsproj=F:\ZZZzzz\Projets Borland Studio\s2aio_cp\s2aio.bdsproj</Transaction>
+    <Transaction>2015/12/20 20:40:06.151.cpp,F:\ZZZzzz\Projets Borland Studio\s2aio_cp\Unit1.cpp=</Transaction>
+    <Transaction>2015/12/20 20:40:06.151.dfm,F:\ZZZzzz\Projets Borland Studio\s2aio_cp\Unit1.dfm=</Transaction>
+    <Transaction>2015/12/20 21:50:03.047.cpp,F:\ZZZzzz\Projets Borland Studio\s2aio_cp\GestionLangue.cpp=</Transaction>
+    <Transaction>2015/12/20 21:50:20.902.bdsproj,F:\ZZZzzz\Projets Borland Studio\s2aio_cp\s2aio.bdsproj=F:\ZZZzzz\Projets Borland Studio\s2aio_cp\s2aio.bdsproj</Transaction>
+    <Transaction>2015/12/20 21:57:36.993.cpp,F:\ZZZzzz\Projets Borland Studio\s2aio_cp\GestionLangue.cpp=</Transaction>
+    <Transaction>2015/12/20 21:59:06.805.cpp,F:\ZZZzzz\Projets Borland Studio\s2aio_cp\Unit1.cpp=F:\ZZZzzz\Projets Borland Studio\s2aio_cp\GestionLangue.cpp</Transaction>
+    <Transaction>2015/12/20 21:59:06.805.h,F:\ZZZzzz\Projets Borland Studio\s2aio_cp\Unit1.h=F:\ZZZzzz\Projets Borland Studio\s2aio_cp\GestionLangue.h</Transaction>
+  </Transactions>
+</BorlandProject>
