@@ -4,5 +4,5 @@ rem fichiers BAT et fork créés par Sébastien CANET
 SET currentpath=%~dp1
 cd %currentpath%tools
 cls
-.\avrdude -Cavrdude.conf -v -patmega328p -carduino -P\\.\COM6 -b115200 -D -V -Uflash:w:s2aio-FirmataPlus.Uno.hex:i
+.\avrdude -Cavrdude.conf -v -patmega32u4 -cavr109 -P\\.\COM8 -b57600 -D -V -Uflash:w:s2a-FirmataPlus.Leonardo.hex:i
 pause

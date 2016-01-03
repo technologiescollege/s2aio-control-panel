@@ -363,7 +363,7 @@ INI->WriteInteger("port COM", "port", port);
 ofstream fichier_s2(".\\tools\\flash_uno.bat", ios::out | ios::trunc);  // ouverture en écriture avec effacement du fichier ouvert
 		if(fichier_s2)
 		{
-				fichier_s2 << "@echo off\nbreak ON\nrem fichiers BAT et fork créés par Sébastien CANET\nSET currentpath=%~dp1\ncd %currentpath%tools\ncls\n.\\avrdude -Cavrdude.conf -v -patmega328p -carduino -P\\" << "\\" << ".\\COM" << port << " -b115200 -D -V -Uflash:w:s2a-FirmataPlus.Uno.hex:i" << "\npause";
+				fichier_s2 << "@echo off\nbreak ON\nrem fichiers BAT et fork créés par Sébastien CANET\nSET currentpath=%~dp1\ncd %currentpath%tools\ncls\n.\\avrdude -Cavrdude.conf -v -patmega328p -carduino -P\\" << "\\" << ".\\COM" << port << " -b115200 -D -V -Uflash:w:s2aio-FirmataPlus.Uno.hex:i" << "\npause";
 				fichier_s2.close();
 		}
 		else ShowMessage(Popup->Items->Strings[1]);
@@ -378,7 +378,7 @@ INI->WriteInteger("port COM", "port", port);
 ofstream fichier_s2(".\\tools\\flash_mega.bat", ios::out | ios::trunc);  // ouverture en écriture avec effacement du fichier ouvert
 		if(fichier_s2)
 		{
-				fichier_s2 << "@echo off\nbreak ON\nrem fichiers BAT et fork créés par Sébastien CANET\nSET currentpath=%~dp1\ncd %currentpath%tools\ncls\n.\\avrdude -Cavrdude.conf -v -patmega2560 -cwiring -P\\" << "\\" << ".\\COM" << port << " -b115200 -D -V -Uflash:w:s2a-FirmataPlus.Mega.hex:i" << "\npause";
+				fichier_s2 << "@echo off\nbreak ON\nrem fichiers BAT et fork créés par Sébastien CANET\nSET currentpath=%~dp1\ncd %currentpath%tools\ncls\n.\\avrdude -Cavrdude.conf -v -patmega2560 -cwiring -P\\" << "\\" << ".\\COM" << port << " -b115200 -D -V -Uflash:w:s2aio-FirmataPlus.Mega.hex:i" << "\npause";
 				fichier_s2.close();
 		}
 		else ShowMessage(Popup->Items->Strings[1]);
@@ -395,7 +395,7 @@ INI->WriteInteger("port COM", "port", port);
 ofstream fichier_s2(".\\tools\\flash_leonardo.bat", ios::out | ios::trunc);  // ouverture en écriture avec effacement du fichier ouvert
 		if(fichier_s2)
 		{
-				fichier_s2 << "@echo off\nbreak ON\nrem fichiers BAT et fork créés par Sébastien CANET\nSET currentpath=%~dp1\ncd %currentpath%tools\ncls\n.\\avrdude -Cavrdude.conf -v -patmega32u4 -cawiring -P\\" << "\\" << ".\\COM" << port << " -b57600 -D -V -Uflash:w:s2a-FirmataPlus.Mega.hex:i" << "\npause";
+				fichier_s2 << "@echo off\nbreak ON\nrem fichiers BAT et fork créés par Sébastien CANET\nSET currentpath=%~dp1\ncd %currentpath%tools\ncls\n.\\avrdude -Cavrdude.conf -v -patmega32u4 -cavr109 -P\\" << "\\" << ".\\COM" << port << " -b57600 -D -V -Uflash:w:s2aio-FirmataPlus.Leonardo.hex:i" << "\npause";
 				fichier_s2.close();
 		}
 		else ShowMessage(Popup->Items->Strings[1]);
@@ -410,7 +410,7 @@ INI->WriteInteger("port COM", "port", port);
 ofstream fichier_s2(".\\tools\\flash_micro.bat", ios::out | ios::trunc);  // ouverture en écriture avec effacement du fichier ouvert
 		if(fichier_s2)
 		{
-				fichier_s2 << "@echo off\nbreak ON\nrem fichiers BAT et fork créés par Sébastien CANET\nSET currentpath=%~dp1\ncd %currentpath%tools\ncls\n.\\avrdude -Cavrdude.conf -v -patmega32u4 -cavr109 -P\\" << "\\" << ".\\COM" << port << " -b115200 -D -V -Uflash:w:s2a-FirmataPlus.Mega.hex:i" << "\npause";
+				fichier_s2 << "@echo off\nbreak ON\nrem fichiers BAT et fork créés par Sébastien CANET\nSET currentpath=%~dp1\ncd %currentpath%tools\ncls\n.\\avrdude -Cavrdude.conf -v -patmega32u4 -cavr109 -P\\" << "\\" << ".\\COM" << port << " -b57600 -D -V -Uflash:w:s2aio-FirmataPlus.Micro.hex:i" << "\npause";
 				fichier_s2.close();
 		}
 		else ShowMessage(Popup->Items->Strings[1]);
@@ -425,7 +425,7 @@ INI->WriteInteger("port COM", "port", port);
 ofstream fichier_s2(".\\tools\\flash_nano.bat", ios::out | ios::trunc);  // ouverture en écriture avec effacement du fichier ouvert
 		if(fichier_s2)
 		{
-				fichier_s2 << "@echo off\nbreak ON\nrem fichiers BAT et fork créés par Sébastien CANET\nSET currentpath=%~dp1\ncd %currentpath%tools\ncls\n.\\avrdude -Cavrdude.conf -v -patmega328p -cwiring -P\\" << "\\" << ".\\COM" << port << " -b57600 -D -V -Uflash:w:s2a-FirmataPlus.Mega.hex:i" << "\npause";
+				fichier_s2 << "@echo off\nbreak ON\nrem fichiers BAT et fork créés par Sébastien CANET\nSET currentpath=%~dp1\ncd %currentpath%tools\ncls\n.\\avrdude -Cavrdude.conf -v -patmega328p -carduino -P\\" << "\\" << ".\\COM" << port << " -b57600 -D -V -Uflash:w:s2aio-FirmataPlus.Nano.hex:i" << "\npause";
 				fichier_s2.close();
 		}
 		else ShowMessage(Popup->Items->Strings[1]);
@@ -516,4 +516,5 @@ ofstream fichier_s2a("pymata_cmd.bat", ios::out | ios::trunc);  // ouverture en 
 ShellExecute(0, 0, "pymata_cmd.bat", 0, 0 , SW_SHOW );
 }
 //---------------------------------------------------------------------------
+
 
