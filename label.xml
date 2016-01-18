@@ -16,9 +16,9 @@
   <Labels>
     <Popup type="TComboBox">
       <Items>
-        <FR>Le fichier scratch2.bat n'existe pas.\Le fichier scratch2.bat n'existe pas.\Le fichier s2aio_cmd.bat n'existe pas.\Le numéro du port COM doit être un entier.\Interface réalisée par Sébastien Canet, décembre 2015 - v1.7 - janvier 2016\Carte Arduino mal connectée ou non reconnue,\vérifiez dans le gestionnaire de périphériques,\accessible depuis le menu 'Outils'.</FR>
-        <EN>The file 'scratch2.bat' does not exist.\The file 'scratch2.bat' does not exist.\The file 's2aio_cmd.bat' does not exist.\#COM port must be an integer.\Software created by Sébastien Canet, december 2015 - v1.7 - january 2016\The Arduino card is not connected,\vérify in the 'Device Management',\shortcut is the 'Tools' menu.</EN>
-		<ES>El fichero 'scratch2.bat'no existe.\El fichero 'scratch2.bat' no existe.\El fichero 's2aio_cmd.bat' no existe.\El número de puerto #COM debe ser un entero.\Software creado por Sébastien Canet, diciembre 2015 - v1.7 - junio 2016\The Arduino card is not connected,\vérify in the 'Device Management',\shortcut is the 'Tools' menu.</ES>
+        <FR>Le fichier scratch2.bat n'existe pas.\Le fichier scratch2.bat n'existe pas.\Le fichier s2aio_cmd.bat n'existe pas.\Le numéro du port COM doit être un entier.\Interface réalisée par Sébastien Canet, décembre 2015 - v1.7 - janvier 2016\Carte Arduino mal connectée ou non reconnue,\vérifiez dans le gestionnaire de périphériques,\accessible depuis le menu 'Outils'.\Fermer s2aio\Fermer Scratch 2\Fermer Scratch2 + s2aio\Fermer PyMata-aio\Blockly@rduino est actif dans votre navigateur\Blockly@rduino communique avec PyMata</FR>
+        <EN>The file 'scratch2.bat' does not exist.\The file 'scratch2.bat' does not exist.\The file 's2aio_cmd.bat' does not exist.\#COM port must be an integer.\Software created by Sébastien Canet, december 2015 - v1.7 - january 2016\The Arduino card is not connected,\vérify in the 'Device Management',\shortcut is the 'Tools' menu.\Close s2aio\Close Scratch 2\Close Scratch2 + s2aio\Close PyMata-aio\Blockly@rduino is active in your browser\Blockly@rduino works with PyMata</EN>
+		<ES>El fichero 'scratch2.bat'no existe.\El fichero 'scratch2.bat' no existe.\El fichero 's2aio_cmd.bat' no existe.\El número de puerto #COM debe ser un entero.\Software creado por Sébastien Canet, diciembre 2015 - v1.7 - junio 2016\The Arduino card is not connected,\vérify in the 'Device Management',\shortcut is the 'Tools' menu.\Close s2aio\Close Scratch 2\Close Scratch2 + s2aio\Close PyMata-aio\Blockly@rduino is active in your browser\Blockly@rduino works with PyMata</ES>
       </Items>
     </Popup>
     <InterfaceS2A type="TFenetrePrincipale">
@@ -77,6 +77,20 @@
         <ES>Lanzar Scratch2</ES>
       </Caption>
     </Button2>
+    <Button3 type="TButton">
+      <Caption>
+        <FR>Lancer pymata</FR>
+        <EN>Launch pymata</EN>
+        <ES>Lanzar pymata</ES>
+      </Caption>
+    </Button3>
+    <Button4 type="TButton">
+      <Caption>
+        <FR>Blockly@rduino</FR>
+        <EN>Blockly@rduino</EN>
+        <ES>Blockly@rduino</ES>
+      </Caption>
+    </Button4>
     <Langue1 type="TMenuItem">
       <Caption>
         <FR>&Langues</FR>
@@ -259,6 +273,20 @@
 				<ES>Inicializar los p&arametros</ES>
 			  </Caption>
 			</Init>		
+			<DebugMenu type="TMenuItem">
+			  <Caption>
+				<FR>Ouvrir le rapport de &deboggage</FR>
+				<EN>Open &debug</EN>
+				<ES>Abrir &debug</ES>
+			  </Caption>
+			</DebugMenu>
+			<s2aio_window type="TMenuItem">
+			  <Caption>
+				<FR>Afficher la fenêtre de connection s2aio/PyMata-io</FR>
+				<EN>See s2aio/PyMata-io  window</EN>
+				<ES>Visualizar ventana s2aio/PyMata-io </ES>
+			  </Caption>
+			</s2aio_window>
     <Documentation1 type="TMenuItem">
       <Caption>
         <FR>&Documentation</FR>
@@ -270,23 +298,16 @@
       <Caption>
         <FR>Aller plus loin avec &Blockly@rduino</FR>
         <EN>Go furthermore with &Blockly@rduino</EN>
-        <ES>Ademas con &Blockly@rduino</ES>
+        <ES>&Blockly@rduino</ES>
       </Caption>
     </BlocklyArduino>
-			<SiteBlocklyrduino type="TMenuItem">
-			  <Caption>
-				<FR>Blockly@rduino en ligne</FR>
-				<EN>Blockly@rduino online</EN>
-				<ES>Blockly@rduino online</ES>
-			  </Caption>
-			</SiteBlocklyrduino>
-			<Pymatapourlasupervision type="TMenuItem">
-			  <Caption>
-				<FR>Pymata pour la supervision</FR>
-				<EN>Pymata for supervision</EN>
-				<ES>Pymata for supervision</ES>
-			  </Caption>
-			</Pymatapourlasupervision>
+	<RevenirsurScratch type="TMenuItem">
+	  <Caption>
+		<FR>Revenir sur Scratch</FR>
+		<EN>Go back to Scratch</EN>
+		<ES>s2aio + Scratch</ES>
+	  </Caption>
+	</RevenirsurScratch>
     <Aide1 type="TMenuItem">
       <Caption>
         <FR>&Aide</FR>
