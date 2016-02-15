@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Traductions>
   <Parametre Separateur="\">
     <Proprietes>
@@ -12,15 +12,13 @@
     <Langue index="FR" name="FrenchLang" default="1" />
     <Langue index="EN" name="EnglishLang" default="0" />
     <Langue index="ES" name="SpanishLang" default="0" />
-	<Langue index="CN" name="SimplifiedChineseLang" default="2" />
   </Langues>
   <Labels>
     <Popup type="TComboBox">
       <Items>
-        <FR>Le fichier scratch2.bat n'existe pas.\Le fichier scratch2.bat n'existe pas.\Le fichier s2aio_cmd.bat n'existe pas.\Le num�ro du port COM doit être un entier.\Interface réalisé par S�bastien Canet, d�cembre 2015 - v1.7 - janvier 2016\Carte Arduino mal connect�e ou non reconnue,\v�rifiez dans le gestionnaire de p�riph�riques,\accessible depuis le menu 'Outils'.\Fermer s2aio\Fermer Scratch 2\Fermer Scratch2 + s2aio\Fermer PyMata-aio\Blockly@rduino est actif dans votre navigateur\Blockly@rduino communique avec PyMata</FR>
+        <FR>Le fichier scratch2.bat n'existe pas.\Le fichier scratch2.bat n'existe pas.\Le fichier s2aio_cmd.bat n'existe pas.\Le num�ro du port COM doit �tre un entier.\Interface r�alis�e par S�bastien Canet, d�cembre 2015 - v1.7 - janvier 2016\Carte Arduino mal connect�e ou non reconnue,\v�rifiez dans le gestionnaire de p�riph�riques,\accessible depuis le menu 'Outils'.\Fermer s2aio\Fermer Scratch 2\Fermer Scratch2 + s2aio\Fermer PyMata-aio\Blockly@rduino est actif dans votre navigateur\Blockly@rduino communique avec PyMata</FR>
         <EN>The file 'scratch2.bat' does not exist.\The file 'scratch2.bat' does not exist.\The file 's2aio_cmd.bat' does not exist.\#COM port must be an integer.\Software created by S�bastien Canet, december 2015 - v1.7 - january 2016\The Arduino card is not connected,\v�rify in the 'Device Management',\shortcut is the 'Tools' menu.\Close s2aio\Close Scratch 2\Close Scratch2 + s2aio\Close PyMata-aio\Blockly@rduino is active in your browser\Blockly@rduino works with PyMata</EN>
 		<ES>El fichero 'scratch2.bat'no existe.\El fichero 'scratch2.bat' no existe.\El fichero 's2aio_cmd.bat' no existe.\El n�mero de puerto #COM debe ser un entero.\Software creado por S�bastien Canet, diciembre 2015 - v1.7 - junio 2016\The Arduino card is not connected,\v�rify in the 'Device Management',\shortcut is the 'Tools' menu.\Close s2aio\Close Scratch 2\Close Scratch2 + s2aio\Close PyMata-aio\Blockly@rduino is active in your browser\Blockly@rduino works with PyMata</ES>
-		<CN>无法找到'scratch2.bat'文件.\无法找到'scratch2.bat'文件.\无法找到'scratch2.bat'文件.\#COM 端口必须为数字.\Software created by S閎astien Canet, december 2014 - v2.1.1 - mai 2015</CN>
       </Items>
     </Popup>
     <InterfaceS2A type="TFenetrePrincipale">
@@ -28,7 +26,6 @@
         <FR>Panneau de contr�le s2aio</FR>
         <EN>s2aio control panel</EN>
         <ES>s2aio panel de control</ES>
-		<CN>s2a : 连接到scratch通讯工具</CN>
       </Caption>
     </InterfaceS2A>
     <Label1 type="TLabel">
@@ -36,7 +33,6 @@
         <FR>Votre carte Arduino</FR>
         <EN>Your Arduino card</EN>
         <ES>Su tarjeta Arduino</ES>
-		<CN>你的USB端口</CN>
       </Caption>
     </Label1>
     <Label2 type="TLabel">
@@ -44,7 +40,6 @@
         <FR>est connect�e sur</FR>
         <EN>is connected as</EN>
         <ES>esta conecatad en</ES>
-		<CN>被连接作为</CN>
       </Caption>
     </Label2>
     <Label3 type="TLabel">
@@ -52,7 +47,6 @@
         <FR>le port COM</FR>
         <EN>COM port #</EN>
         <ES>el puerto COM</ES>
-		<CN>COM 端口</CN>
       </Caption>
     </Label3>
     <Label4 type="TLabel">
@@ -60,7 +54,6 @@
         <FR>La fen�tre se fermera s'il y a un probl�me de port</FR>
         <EN>The pop-up window will close if there's a COM problem</EN>
         <ES>La ventana emergente se cerrara si hay un problema COM</ES>
-		<CN>如果COM端口出现问题,弹出窗口将会关闭</CN>
       </Caption>
     </Label4>
     <Label5 type="TLabel">
@@ -68,7 +61,6 @@
         <FR>ou bien si la carte Arduino est mal programm�e.</FR>
         <EN>or if the Arduino card is not uploaded correctly.</EN>
         <ES>o si la tarjeta Arduino no se carga correctamente.</ES>
-		<CN>有可能你的USB没有连接正确</CN>
       </Caption>
     </Label5>
     <Button1 type="TButton">
@@ -76,7 +68,6 @@
         <FR>Lancer s2aio</FR>
         <EN>Launch s2aio</EN>
         <ES>Lanzar s2aio</ES>
-		<CN>启动Scratch通讯</CN>
       </Caption>
     </Button1>
     <Button2 type="TButton">
@@ -84,7 +75,6 @@
         <FR>Lancer Scratch2</FR>
         <EN>Launch Scratch2</EN>
         <ES>Lanzar Scratch2</ES>
-		<CN>启动Scratch2</CN>
       </Caption>
     </Button2>
     <Button3 type="TButton">
@@ -92,7 +82,6 @@
         <FR>Lancer pymata</FR>
         <EN>Launch pymata</EN>
         <ES>Lanzar pymata</ES>
-		<CN>启动 pymata</CN>
       </Caption>
     </Button3>
     <Button4 type="TButton">
@@ -100,7 +89,6 @@
         <FR>Blockly@rduino</FR>
         <EN>Blockly@rduino</EN>
         <ES>Blockly@rduino</ES>
-		<CN>Blockly@rduino</CN>
       </Caption>
     </Button4>
     <Langue1 type="TMenuItem">
@@ -108,7 +96,6 @@
         <FR>&Langues</FR>
         <EN>&Languages</EN>
         <ES>&Lenguajes</ES>
-		<CN>&Lenguacns</CN>
       </Caption>
     </Langue1>
     <FrenchLang type="TMenuItem">
@@ -116,7 +103,6 @@
         <FR>Fran�ais</FR>
         <EN>French</EN>
         <ES>Fran�es</ES>
-		<CN>Chinese</CN>
       </Caption>
     </FrenchLang>
     <EnglishLang type="TMenuItem">
@@ -124,7 +110,6 @@
         <FR>Anglais</FR>
         <EN>English</EN>
         <ES>Englices</ES>
-		<CN>Chinese</CN>
       </Caption>
     </EnglishLang>
     <SpanishLang type="TMenuItem">
@@ -132,23 +117,13 @@
         <FR>Espagnol</FR>
         <EN>Spanish</EN>
         <ES>Espanol</ES>
-		<CN>Chinese</CN>
       </Caption>
     </SpanishLang>
-	<SimplifiedChineseLang type="TMenuItem">
-      <Caption>
-        <FR>法语</FR>
-        <EN>英语</EN>
-        <ES>西班牙语</ES>
-		<CN>简体中文</CN>
-      </Caption>
-    </SimplifiedChineseLang>
     <Fichier type="TMenuItem">
       <Caption>
         <FR>&Fichier</FR>
         <EN>&File</EN>
         <ES>&Archivo</ES>
-		<CN>&文件</CN>
       </Caption>
     </Fichier>
 			<Bibliothque type="TMenuItem">
@@ -156,7 +131,6 @@
 				<FR>B&iblioth�que</FR>
 				<EN>L&ibrairie</EN>
 				<ES>L&ibrerias</ES>
-				<CN>L&ibrerias</CN>
 			  </Caption>
 			</Bibliothque>
 			<ExemplesScratch2 type="TMenuItem">
@@ -164,7 +138,6 @@
 				<FR>&Projets Scratch2</FR>
 				<EN>&Project Scratch2</EN>
 				<ES>&Proyecto Scratch2</ES>
-				<CN>&项目 Scratch2</CN>
 			  </Caption>
 			</ExemplesScratch2>
 			<Quitter1 type="TMenuItem">
@@ -172,7 +145,6 @@
 				<FR>&Quitter</FR>
 				<EN>&Quit</EN>
 				<ES>&Salir</ES>
-				<CN>&退出</CN>
 			  </Caption>
 			</Quitter1>
     <Outils1 type="TMenuItem">
@@ -180,7 +152,6 @@
         <FR>&Outils</FR>
         <EN>T&ools</EN>
         <ES>H&erramientas</ES>
-		<CN>&工具</CN>
       </Caption>
     </Outils1>
 			<Gestionnairedepriphriques1 type="TMenuItem">
@@ -188,7 +159,6 @@
 				<FR>Gestio&nnaire de p�riph�riques</FR>
 				<EN>Device ma&nagement</EN>
 				<ES>Gestion de p&erif�ricos</ES>
-				<CN>&设备管理器</CN>
 			  </Caption>
 			</Gestionnairedepriphriques1>
 			<InstallDriver type="TMenuItem">
@@ -196,7 +166,6 @@
 				<FR>&Installer les pilotes</FR>
 				<EN>&Install drivers</EN>
 				<ES>&Instalar drivers</ES>
-				<CN>&安装驱动</CN>
 			  </Caption>
 			</InstallDriver>
 					<w32 type="TMenuItem">
@@ -204,7 +173,6 @@
 						<FR>&Windows 32bits x86</FR>
 						<EN>&Windows 32bits x86</EN>
 						<ES>&Windows 32bits x86</ES>
-						<CN>&Windows 32bits x86</CN>
 					  </Caption>
 					</w32>
 					<w64 type="TMenuItem">
@@ -212,7 +180,6 @@
 						<FR>&Windows 64bits x64</FR>
 						<EN>&Windows 64bits x64</EN>
 						<ES>&Windows 64bits x64</ES>
-						<CN>&Windows 64bits x64</CN>
 					  </Caption>
 					</w64>
 			<Firmata type="TMenuItem">
@@ -220,7 +187,6 @@
 				<FR>T�l�verser 'FirmataPlus' dans une Arduino/Genuino</FR>
 				<EN>Upload 'FirmataPlus' in Arduino/Genuino</EN>
 				<ES>Descargar 'Firmata' en una Arduino/Genuino</ES>
-				<CN>将 'Firmata' 写入Arduino/Genuino</CN>
 			  </Caption>
 			</Firmata>	
 					<Firmata_Leonardo type="TMenuItem">
@@ -228,7 +194,6 @@
 						<FR>Leonardo</FR>
 						<EN>Leonardo</EN>
 						<ES>Leonardo</ES>
-						<CN>Leonardo</CN>
 					  </Caption>
 					</Firmata_Leonardo>
 					<Firmata_Mega type="TMenuItem">
@@ -236,7 +201,6 @@
 						<FR>Mega (2560)</FR>
 						<EN>Mega (2560)</EN>
 						<ES>Mega (2560)</ES>
-						<CN>Mega (2560)</CN>
 					  </Caption>
 					</Firmata_Mega>
 					<Firmata_Micro type="TMenuItem">
@@ -244,7 +208,6 @@
 						<FR>Micro</FR>
 						<EN>Micro</EN>
 						<ES>Micro</ES>
-						<CN>Micro</CN>
 					  </Caption>
 					</Firmata_Micro>
 					<Firmata_Nano type="TMenuItem">
@@ -252,7 +215,6 @@
 						<FR>Nano</FR>
 						<EN>Nano</EN>
 						<ES>Nano</ES>
-						<CN>Nano</CN>
 					  </Caption>
 					</Firmata_Nano>	
 					<Firmata_Uno type="TMenuItem">
@@ -260,7 +222,6 @@
 						<FR>Uno</FR>
 						<EN>Uno</EN>
 						<ES>Uno</ES>
-						<CN>Uno</CN>
 					  </Caption>
 					</Firmata_Uno>
 			<Locate type="TMenuItem">
@@ -268,7 +229,6 @@
 				<FR>&Localiser les dossiers</FR>
 				<EN>&Locate folders</EN>
 				<ES>&Localizar carpetas</ES>
-				<CN>&本地文件夹设置</CN>
 			  </Caption>
 			</Locate>
 					<Ouvrir type="TMenuItem">
@@ -276,7 +236,6 @@
 						<FR>Localiser Scratch 2</FR>
 						<EN>Locate Scratch2</EN>
 						<ES>Localizar Scratch2</ES>
-						<CN>本地Scratch2</CN>
 					  </Caption>
 					</Ouvrir>
 					<Localiserledossierexemples1 type="TMenuItem">
@@ -284,7 +243,6 @@
 						<FR>Localiser le dossier 'biblioth�que'</FR>
 						<EN>Locate folder 'librairie'</EN>
 						<ES>Localizar carpeta de 'libreria'</ES>
-						<CN>Locate folder 'librairie'</CN>
 					  </Caption>
 					</Localiserledossierexemples1>
 					<Localiserledossierprojets1 type="TMenuItem">
@@ -292,7 +250,6 @@
 						<FR>Localiser le dossier 'projets'</FR>
 						<EN>Locate folder 'project'</EN>
 						<ES>Localizar carpeta de 'proyectos'</ES>
-						<CN>Locate folder 'project'</CN>
 					  </Caption>
 					</Localiserledossierprojets1>
 					<Localiserledossierdocumentation1 type="TMenuItem">
@@ -300,7 +257,6 @@
 						<FR>Localiser le dossier 'documentation'</FR>
 						<EN>Locate folder 'documentation'</EN>
 						<ES>Localizar carpeta de 'documentacion'</ES>
-						<CN>Locate folder 'documentation'</CN>
 					  </Caption>
 					</Localiserledossierdocumentation1>
 					<Drivers type="TMenuItem">
@@ -308,7 +264,6 @@
 						<FR>Ouvrir le dossier 'pilotes'</FR>
 						<EN>Open 'drivers' folder</EN>
 						<ES>Abrir carpeta de 'drivers'</ES>
-						<CN>打开 '驱动' 文件夹</CN>
 					  </Caption>
 					</Drivers>
 			<Init type="TMenuItem">
@@ -316,7 +271,6 @@
 				<FR>R�initialiser les p&aram�tres</FR>
 				<EN>Initialise p&arameters</EN>
 				<ES>Inicializar los p&arametros</ES>
-				<CN>Initialise p&arameters</CN>
 			  </Caption>
 			</Init>		
 			<DebugMenu type="TMenuItem">
@@ -324,7 +278,6 @@
 				<FR>Ouvrir le rapport de &deboggage</FR>
 				<EN>Open &debug</EN>
 				<ES>Abrir &debug</ES>
-				<CN>Open &debug</CN>
 			  </Caption>
 			</DebugMenu>
 			<s2aio_window type="TMenuItem">
@@ -332,7 +285,6 @@
 				<FR>Afficher la fen�tre de connection s2aio/PyMata-io</FR>
 				<EN>See s2aio/PyMata-io  window</EN>
 				<ES>Visualizar ventana s2aio/PyMata-io </ES>
-				<CN>See s2aio/PyMata-io  window</CN>
 			  </Caption>
 			</s2aio_window>
     <Documentation1 type="TMenuItem">
@@ -340,7 +292,6 @@
         <FR>&Documentation</FR>
         <EN>&Documentation</EN>
         <ES>&Documentacion</ES>
-		<CN>&我的文档</CN>
       </Caption>
     </Documentation1>
     <BlocklyArduino type="TMenuItem">
@@ -348,7 +299,6 @@
         <FR>Aller plus loin avec &Blockly@rduino</FR>
         <EN>Go furthermore with &Blockly@rduino</EN>
         <ES>&Blockly@rduino</ES>
-		<CN>Go furthermore with &Blockly@rduino</CN>
       </Caption>
     </BlocklyArduino>
 	<RevenirsurScratch type="TMenuItem">
@@ -356,7 +306,6 @@
 		<FR>Revenir sur Scratch</FR>
 		<EN>Go back to Scratch</EN>
 		<ES>s2aio + Scratch</ES>
-		<CN>Go back to Scratch</CN>
 	  </Caption>
 	</RevenirsurScratch>
     <Aide1 type="TMenuItem">
@@ -364,7 +313,6 @@
         <FR>&Aide</FR>
         <EN>&Help</EN>
         <ES>&Ayuda</ES>
-		<CN>&帮助</CN>
       </Caption>
     </Aide1>
 			<PrparerArduino1 type="TMenuItem">
@@ -372,7 +320,6 @@
 				<FR>&1. Pr�parer la carte Arduino</FR>
 				<EN>&1. prepare Arduino card</EN>
 				<ES>&1. Preparar la tarjeta Arduino</ES>
-				<CN>&1. prepare Arduino card</CN>
 			  </Caption>
 			</PrparerArduino1>
 			<Utilisation1 type="TMenuItem">
@@ -380,7 +327,6 @@
 				<FR>&2. Utilisation de s2aio</FR>
 				<EN>&2. how to use s2aio</EN>
 				<ES>&2. Utilizacion de s2aio</ES>
-				<CN>&2. how to use s2aio</CN>
 			  </Caption>
 			</Utilisation1>
 			<N4Principesdeprogrammation1 type="TMenuItem">
@@ -388,7 +334,6 @@
 				<FR>&3. Principes de programmation</FR>
 				<EN>&3. the best way to code</EN>
 				<ES>&3. Principios de programacion</ES>
-				<CN>&3. the best way to code</CN>
 			  </Caption>
 			</N4Principesdeprogrammation1>
 			<N3Mmentodescommandes1 type="TMenuItem">
@@ -396,7 +341,6 @@
 				<FR>&4. M�mento des commandes</FR>
 				<EN>&4. s2aio command summary</EN>
 				<ES>&4. Aviso de ordenes</ES>
-				<CN>&4. s2aio command summary</CN>
 			  </Caption>
 			</N3Mmentodescommandes1>
 			<Links type="TMenuItem">
@@ -404,7 +348,6 @@
 				<FR>&Liens</FR>
 				<EN>&Links</EN>
 				<ES>&Enlaces</ES>
-				<CN>&Links</CN>
 			  </Caption>
 			</Links>
 					<Wiki1 type="TMenuItem">
@@ -412,7 +355,6 @@
 						<FR>Wiki</FR>
 						<EN>Wiki</EN>
 						<ES>Wiki</ES>
-						<CN>Wiki</CN>
 					  </Caption>
 					</Wiki1>
 					<A_propos type="TMenuItem">
@@ -420,7 +362,6 @@
 						<FR>Fichiers source</FR>
 						<EN>Github file</EN>
 						<ES>Ficheros fuente Github</ES>
-						<CN>Github file</CN>
 					  </Caption>
 					</A_propos>
 					<Siteofficieldes2aio1 type="TMenuItem">
@@ -428,7 +369,6 @@
 						<FR>Site officiel de s2aio</FR>
 						<EN>s2aio official site</EN>
 						<ES>Sitio oficial de s2aio</ES>
-						<CN>s2aio official site</CN>
 					  </Caption>
 					</Siteofficieldes2aio1>
 					<SiteofficielArduino1 type="TMenuItem">
@@ -436,7 +376,6 @@
 						<FR>Site officiel Arduino</FR>
 						<EN>Arduino official site</EN>
 						<ES>Sitio oficial de Arduino</ES>
-						<CN>Arduino official site</CN>
 					  </Caption>
 					</SiteofficielArduino1>
 					<lchargerlesdrivers1 type="TMenuItem">
@@ -444,7 +383,6 @@
 						<FR>T�l�charger les pilotes</FR>
 						<EN>Download Arduino drivers</EN>
 						<ES>Cargar drivers de Arduino</ES>
-						<CN>Download Arduino drivers</CN>
 					  </Caption>
 					</lchargerlesdrivers1>
 					<DlScratch2 type="TMenuItem">
@@ -452,7 +390,6 @@
 						<FR>T�l�charger Scratch2 hors ligne</FR>
 						<EN>Download offline Scratch2</EN>
 						<ES>Cargar Scratch2</ES>
-						<CN>Download offline Scratch2</CN>
 					  </Caption>
 					</DlScratch2>
 					<UtiliserScratch2enligne type="TMenuItem">
@@ -460,7 +397,6 @@
 						<FR>Utiliser Scratch2 en ligne</FR>
 						<EN>Scratch2 online</EN>
 						<ES>Scratch2 en linea</ES>
-						<CN>Scratch2 online</CN>
 					  </Caption>
 					</UtiliserScratch2enligne>
 			<Apropos1 type="TMenuItem">
@@ -468,7 +404,6 @@
 				<FR>A propos</FR>
 				<EN>About</EN>
 				<ES>Acerca de</ES>
-				<CN>About</CN>
 			  </Caption>
 			</Apropos1>
   </Labels>
