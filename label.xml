@@ -259,6 +259,13 @@
 						<ES>Localizar carpeta de 'documentacion'</ES>
 					  </Caption>
 					</Localiserledossierdocumentation1>
+					<LocaliserIDE type="TMenuItem">
+					  <Caption>
+						<FR>Localiser Arduino.exe</FR>
+						<EN>Locate IDE Arduino.exe</EN>
+						<ES>Localizar Arduino.exe</ES>
+					  </Caption>
+					</LocaliserIDE>
 					<Drivers type="TMenuItem">
 					  <Caption>
 						<FR>Ouvrir le dossier 'pilotes'</FR>
