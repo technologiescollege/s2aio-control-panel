@@ -72,16 +72,16 @@
     </Button1>
     <Button2 type="TButton">
       <Caption>
-        <FR>Lancer Scratch2</FR>
-        <EN>Launch Scratch2</EN>
-        <ES>Lanzar Scratch2</ES>
+        <FR>Scratch2</FR>
+        <EN>Scratch2</EN>
+        <ES>Scratch2</ES>
       </Caption>
     </Button2>
     <Button3 type="TButton">
       <Caption>
-        <FR>Lancer pymata</FR>
-        <EN>Launch pymata</EN>
-        <ES>Lanzar pymata</ES>
+        <FR>Lancer PyMata</FR>
+        <EN>Launch PyMata</EN>
+        <ES>Lanzar PyMata</ES>
       </Caption>
     </Button3>
     <Button4 type="TButton">
