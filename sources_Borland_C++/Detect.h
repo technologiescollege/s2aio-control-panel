@@ -21,6 +21,7 @@ protected:
 public:
 	__fastcall TestCarte(bool CreateSuspended);
 	void __fastcall Scan_Arduino();
+	bool isRunning(int pid);
 };
 //---------------------------------------------------------------------------
 #endif

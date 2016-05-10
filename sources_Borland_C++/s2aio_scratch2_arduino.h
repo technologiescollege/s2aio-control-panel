@@ -27,7 +27,8 @@ __published:	// Composants gérés par l'EDI
 	TImage *Image2;
 	TButton *Button1;
 	TButton *Button2;
-	TButton *ScratchEnLigne;
+	TButton *Button3;    
+	TButton *Button4;
 	TLabel *Label1;
 	TLabel *Label2;
 	TLabel *Label3;
@@ -80,15 +81,16 @@ __published:	// Composants gérés par l'EDI
 	TMenuItem *Firmata_Micro;
 	TMenuItem *Firmata_Nano;
 	TMenuItem *DlScratch2;
-	TMenuItem *SiteBlocklyrduino;
-	TMenuItem *Pymatapourlasupervision;
+	TImage *Image3;
+	TMenuItem *RevenirsurScratch;
 	void __fastcall InitINI();
 	void __fastcall A_proposClick(TObject *Sender);
 	void __fastcall PrparerArduino1Click(TObject *Sender);
 	void __fastcall Utilisation1Click(TObject *Sender);
 	void __fastcall N3Mmentodescommandes1Click(TObject *Sender);
 	void __fastcall Wiki1Click(TObject *Sender);
-	void __fastcall ScratchEnLigneClick(TObject *Sender);
+	void __fastcall Button4Click(TObject *Sender);
+	void __fastcall Button3Click(TObject *Sender);
 	void __fastcall Button2Click(TObject *Sender);
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall Quitter1Click(TObject *Sender);
@@ -118,8 +120,9 @@ __published:	// Composants gérés par l'EDI
 	void __fastcall Firmata_LeonardoClick(TObject *Sender);
 	void __fastcall Firmata_MicroClick(TObject *Sender);
 	void __fastcall Firmata_NanoClick(TObject *Sender);
-	void __fastcall SiteBlocklyrduinoClick(TObject *Sender);
-	void __fastcall PymatapourlasupervisionClick(TObject *Sender);
+	void __fastcall Environnement(bool BouS);
+	void __fastcall BlocklyArduinoClick(TObject *Sender);
+	void __fastcall RevenirsurScratchClick(TObject *Sender);
 private:	// Déclarations de l'utilisateur
 	TLabel * interLabel ;
 	TButton * interButton ;

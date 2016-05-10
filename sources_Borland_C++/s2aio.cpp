@@ -3,7 +3,7 @@
 #include <vcl.h>
 #pragma hdrstop
 //---------------------------------------------------------------------------
-USEFORM("s2aio_scratch2_arduino.cpp", InterfaceS2A);
+USEFORM("s2aio_scratch2_arduino_killprocess.cpp", InterfaceS2A);
 //---------------------------------------------------------------------------
 WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {

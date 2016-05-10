@@ -44,6 +44,8 @@ TStringList *Docs = new TStringList;
 TStringList *Extensions1 = new TStringList;
 TStringList *Extensions2 = new TStringList;
 
+bool BlocklyOUScratch = false;
+
 //---------------------------------------------------------------------------
 void __fastcall TInterfaceS2A::InitINI()
 {
@@ -60,6 +62,11 @@ void __fastcall TInterfaceS2A::InitINI()
 __fastcall TInterfaceS2A::TInterfaceS2A(TComponent* Owner)
 	: TForm(Owner)
 {
+  InterfaceS2A->ClientWidth=530;
+  InterfaceS2A->Constraints->MinWidth=530;
+  InterfaceS2A->Constraints->MaxWidth=530;
+  InterfaceS2A->Height=240;
+
   this->ImgConnect->Picture->LoadFromFile("unconnect.bmp");
   //vérification de l'existence du fichier INI, sinon le recréé
   if (!FileExists(ExtractFilePath(Application->ExeName)+ "s2aio.ini"))
@@ -106,6 +113,59 @@ __fastcall TInterfaceS2A::TInterfaceS2A(TComponent* Owner)
   arg=GetCommandLine();
   arg=arg.Delete(1,7);  //élimine les 5 premiers caractères : s2aio_
   if(arg=="-i") InitINI();
+  Environnement(BlocklyOUScratch);
+}
+//-------------------------recherche des fichiers sb2 pour les lister dans le menu Fichier--------------------------------------------------
+void __fastcall TInterfaceS2A::Environnement(bool BouS)
+{
+//true if Blockly fisrt, else false if Scratch
+if (BouS == true)
+	{
+	  InterfaceS2A->BlocklyArduino->Visible=false;
+	  InterfaceS2A->RevenirsurScratch->Visible=true;
+	  InterfaceS2A->Button1->Enabled=false;
+	  InterfaceS2A->Button2->Enabled=false; 
+	  InterfaceS2A->Button1->Visible=false;
+	  InterfaceS2A->Button2->Visible=false;
+	  InterfaceS2A->Button3->Enabled=true;
+	  InterfaceS2A->Button4->Enabled=true;
+	  InterfaceS2A->Button3->Visible=true;
+	  InterfaceS2A->Button4->Visible=true;
+	  InterfaceS2A->Image1->Visible=false;
+	  InterfaceS2A->Image3->Visible=true;
+	  /*InterfaceS2A->Image_feu_vert->Left=351;
+	  InterfaceS2A->Image_feu_vert->Top=265;
+	  InterfaceS2A->Image_feu_jaune->Left=351;
+	  InterfaceS2A->Image_feu_jaune->Top=214;
+	  InterfaceS2A->Image_feu_rouge->Left=24;
+	  InterfaceS2A->Image_feu_rouge->Top=265;
+	  InterfaceS2A->Image_feu_vide->Left=24;
+	  InterfaceS2A->Image_feu_vide->Top=214;*/
+	}
+	else if (BouS == false)
+	{
+	  InterfaceS2A->BlocklyArduino->Visible=true;
+	  InterfaceS2A->RevenirsurScratch->Visible=false;
+	  InterfaceS2A->Button1->Enabled=true;
+	  InterfaceS2A->Button2->Enabled=true;  
+	  InterfaceS2A->Button1->Visible=true;
+	  InterfaceS2A->Button2->Visible=true;
+	  InterfaceS2A->Button3->Enabled=false;
+	  InterfaceS2A->Button4->Enabled=false;
+	  InterfaceS2A->Button3->Visible=false;
+	  InterfaceS2A->Button4->Visible=false;
+	  InterfaceS2A->Image1->Visible=true;
+	  InterfaceS2A->Image3->Visible=false;
+	  /*InterfaceS2A->Image_feu_vert->Left=351;
+	  InterfaceS2A->Image_feu_vert->Top=265;
+	  InterfaceS2A->Image_feu_jaune->Left=351;
+	  InterfaceS2A->Image_feu_jaune->Top=214;
+	  InterfaceS2A->Image_feu_rouge->Left=24;
+	  InterfaceS2A->Image_feu_rouge->Top=265;
+	  //Scratch + feux vides
+	  InterfaceS2A->Image_feu_vide->Left=360;
+	  InterfaceS2A->Image_feu_vide->Top=150;*/
+	}
 }
 //-------------------------recherche des fichiers sb2 pour les lister dans le menu Fichier--------------------------------------------------
 void __fastcall TInterfaceS2A::SearchEx(AnsiString FilePath, TStringList * Extensions, TStrings * ListeFichiers, int RangMenu)
@@ -226,11 +286,6 @@ ShellExecute(0, 0, ".\\aide\\4.pdf", 0, 0 , SW_SHOW );
 void __fastcall TInterfaceS2A::Wiki1Click(TObject *Sender)
 {
 ShellExecute(0, 0, "http://tic.technologiescollege.fr/wiki", 0, 0 , SW_SHOW );
-}
-//---------------------------------------------------------------------------
-void __fastcall TInterfaceS2A::ScratchEnLigneClick(TObject *Sender)
-{
-ShellExecute(0, 0, "http://scratch.mit.edu/projects/editor/", 0, 0 , SW_SHOW );
 }
 //---------------------------------------------------------------------------
 void __fastcall TInterfaceS2A::Button2Click(TObject *Sender)
@@ -496,13 +551,13 @@ if (Edit1->Text == "1")
 //---------------------------------------------------------------------------
 
 
-void __fastcall TInterfaceS2A::SiteBlocklyrduinoClick(TObject *Sender)
+void __fastcall TInterfaceS2A::Button4Click(TObject *Sender)
 {
 ShellExecute(0, 0, "http://www.technologiescollege.fr/blockly@rduino", 0, 0 , SW_SHOW );
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TInterfaceS2A::PymatapourlasupervisionClick(TObject *Sender)
+void __fastcall TInterfaceS2A::Button3Click(TObject *Sender)
 {
 port=this->Edit1->Text.ToInt();
 INI->WriteInteger("port COM", "port", port);
@@ -517,4 +572,16 @@ ShellExecute(0, 0, "pymata_cmd.bat", 0, 0 , SW_SHOW );
 }
 //---------------------------------------------------------------------------
 
+
+void __fastcall TInterfaceS2A::BlocklyArduinoClick(TObject *Sender)
+{
+Environnement(true);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TInterfaceS2A::RevenirsurScratchClick(TObject *Sender)
+{
+Environnement(false);
+}
+//---------------------------------------------------------------------------
 

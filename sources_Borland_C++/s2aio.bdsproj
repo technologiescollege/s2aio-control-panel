@@ -165,7 +165,7 @@
         <FILE FILENAME="s2aio.cpp" CONTAINERID="CCompiler" LOCALCOMMAND="" UNITNAME="s2aio" FORMNAME="" DESIGNCLASS=""/>
         <FILE FILENAME="s2aio.res" CONTAINERID="ResTool" LOCALCOMMAND="" UNITNAME="s2aio.res" FORMNAME="" DESIGNCLASS=""/>
         <FILE FILENAME="Detect.cpp" CONTAINERID="CCompiler" LOCALCOMMAND="" UNITNAME="Detect" FORMNAME="" DESIGNCLASS="" ADDITIONAL="Detect.h"/>
-        <FILE FILENAME="s2aio_scratch2_arduino.cpp" CONTAINERID="CCompiler" LOCALCOMMAND="" UNITNAME="s2aio_scratch2_arduino" FORMNAME="InterfaceS2A" DESIGNCLASS="" ADDITIONAL="s2aio_scratch2_arduino.h"/>
+        <FILE FILENAME="s2aio_scratch2_arduino_killprocess.cpp" CONTAINERID="CCompiler" LOCALCOMMAND="" UNITNAME="s2aio_scratch2_arduino_killprocess" FORMNAME="InterfaceS2A" DESIGNCLASS="" ADDITIONAL="s2aio_scratch2_arduino_killprocess.h"/>
         <FILE FILENAME="tinyxml\tinyxml.cpp" CONTAINERID="CCompiler" LOCALCOMMAND="" UNITNAME="tinyxml" FORMNAME="" DESIGNCLASS=""/>
         <FILE FILENAME="tinyxml\tinystr.cpp" CONTAINERID="CCompiler" LOCALCOMMAND="" UNITNAME="tinystr" FORMNAME="" DESIGNCLASS=""/>
         <FILE FILENAME="tinyxml\tinyxmlerror.cpp" CONTAINERID="CCompiler" LOCALCOMMAND="" UNITNAME="tinyxmlerror" FORMNAME="" DESIGNCLASS=""/>
@@ -179,9 +179,9 @@
         <VersionInfo>
           <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
           <VersionInfo Name="AutoIncBuild">False</VersionInfo>
-          <VersionInfo Name="MajorVer">1</VersionInfo>
-          <VersionInfo Name="MinorVer">7</VersionInfo>
-          <VersionInfo Name="Release">0</VersionInfo>
+          <VersionInfo Name="MajorVer">2</VersionInfo>
+          <VersionInfo Name="MinorVer">1</VersionInfo>
+          <VersionInfo Name="Release">8</VersionInfo>
           <VersionInfo Name="Build">0</VersionInfo>
           <VersionInfo Name="Debug">False</VersionInfo>
           <VersionInfo Name="PreRelease">False</VersionInfo>
@@ -194,13 +194,13 @@
         <VersionInfoKeys>
           <VersionInfoKeys Name="CompanyName">ASTUCE.technology</VersionInfoKeys>
           <VersionInfoKeys Name="FileDescription">Scratch2 &lt;-&gt; s2aio &lt;-&gt; Arduino</VersionInfoKeys>
-          <VersionInfoKeys Name="FileVersion">1.7.0.0</VersionInfoKeys>
+          <VersionInfoKeys Name="FileVersion">2.1.8.0</VersionInfoKeys>
           <VersionInfoKeys Name="InternalName"></VersionInfoKeys>
           <VersionInfoKeys Name="LegalCopyright">Sébastien CANET</VersionInfoKeys>
           <VersionInfoKeys Name="LegalTrademarks">CC-BY-NC-ND</VersionInfoKeys>
           <VersionInfoKeys Name="OriginalFilename">s2aio.exe</VersionInfoKeys>
           <VersionInfoKeys Name="ProductName">s2aio control</VersionInfoKeys>
-          <VersionInfoKeys Name="ProductVersion">1.7</VersionInfoKeys>
+          <VersionInfoKeys Name="ProductVersion">2.1.8</VersionInfoKeys>
           <VersionInfoKeys Name="Comments"></VersionInfoKeys>
         </VersionInfoKeys>
         <Debugging>
