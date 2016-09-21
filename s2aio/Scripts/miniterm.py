@@ -1,4 +1,4 @@
-#!c:\python33\python.exe
+#!F:\Logiciels\Arduino_graphique\s2aio\s2aio\python.exe
 
 # Very simple serial terminal
 # (C)2002-2011 Chris Liechti <cliechti@gmx.net>
@@ -8,7 +8,7 @@
 # repr, useful for debug purposes)
 
 
-import sys, os, serial, threading, atexit
+import sys, os, serial, threading
 try:
     from serial.tools.list_ports import comports
 except ImportError:
@@ -143,7 +143,7 @@ elif os.name == 'posix':
     def cleanup_console():
         console.cleanup()
 
-    atexit.register(cleanup_console)      # terminal modes have to be restored on exit...
+    sys.exitfunc = cleanup_console      # terminal modes have to be restored on exit...
 
 else:
     raise NotImplementedError("Sorry no implementation for your platform (%s) available." % sys.platform)
@@ -271,7 +271,7 @@ class Miniterm(object):
                     for c in data:
                         sys.stdout.write("%s " % c.encode('hex'))
                 sys.stdout.flush()
-        except serial.SerialException as e:
+        except serial.SerialException, e:
             self.alive = False
             # would be nice if the console reader could be interruptted at this
             # point...
@@ -316,7 +316,7 @@ class Miniterm(object):
                                     self.serial.flush()
                                     sys.stderr.write('.')   # Progress indicator.
                                 sys.stderr.write('\n--- File %s sent ---\n' % filename)
-                            except IOError as e:
+                            except IOError, e:
                                 sys.stderr.write('--- ERROR opening file %s: %s ---\n' % (filename, e))
                         console.setup()
                     elif c in '\x08hH?':                    # CTRL+H, h, H, ? -> Show help
@@ -382,7 +382,7 @@ class Miniterm(object):
                                 new_serial.setRTS(self.rts_state)
                                 new_serial.setDTR(self.dtr_state)
                                 new_serial.setBreak(self.break_state)
-                            except Exception as e:
+                            except Exception, e:
                                 sys.stderr.write('--- ERROR opening new port: %s ---\n' % (e,))
                                 new_serial.close()
                             else:
@@ -398,7 +398,7 @@ class Miniterm(object):
                         backup = self.serial.baudrate
                         try:
                             self.serial.baudrate = int(sys.stdin.readline().strip())
-                        except ValueError as e:
+                        except ValueError, e:
                             sys.stderr.write('--- ERROR setting baudrate: %s ---\n' % (e,))
                             self.serial.baudrate = backup
                         else:
@@ -629,7 +629,7 @@ def main():
         # noport given on command line -> ask user now
         if port is None:
             dump_port_list()
-            port = input('Enter port name:')
+            port = raw_input('Enter port name:')
 
     convert_outgoing = CONVERT_CRLF
     if options.cr:
@@ -648,7 +648,7 @@ def main():
             convert_outgoing=convert_outgoing,
             repr_mode=options.repr_mode,
         )
-    except serial.SerialException as e:
+    except serial.SerialException, e:
         sys.stderr.write("could not open port %r: %s\n" % (port, e))
         sys.exit(1)
 

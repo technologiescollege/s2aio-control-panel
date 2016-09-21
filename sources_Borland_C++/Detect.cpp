@@ -178,11 +178,14 @@ if (isRunning(InterfaceS2A->PID_scratch) || isRunning(InterfaceS2A->PID_webserve
 EtatDetectAvant = EtatDetect;
 //scan registry for Arduino
 TRegistry *registre1 = new TRegistry();
-TRegistry *registre2 = new TRegistry();
+TRegistry *registre2 = new TRegistry();  
+TRegistry *registre3 = new TRegistry();
 registre1->RootKey = HKEY_LOCAL_MACHINE;
-registre2->RootKey = HKEY_LOCAL_MACHINE;
+registre2->RootKey = HKEY_LOCAL_MACHINE; 
+registre3->RootKey = HKEY_LOCAL_MACHINE;
 registre1->OpenKeyReadOnly("SYSTEM\\CurrentControlSet\\Services\\usbser\\Enum");
-registre2->OpenKeyReadOnly("SYSTEM\\CurrentControlSet\\Services\\FTDIBUS\\Enum");
+registre2->OpenKeyReadOnly("SYSTEM\\CurrentControlSet\\Services\\FTDIBUS\\Enum");  
+registre3->OpenKeyReadOnly("SYSTEM\\CurrentControlSet\\Services\\CH341SER_A64\\Enum");
 //valable seulement pour 1 carte Arduino, sinon incrémente...
 //HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbser\Enum -> 0 -> USB\VID_2341&PID_0042\6493633303735151D061
 //HKEY_LOCAL_MACHINE\HARDWARE\DEVICEMAP\SERIALCOMM -> \Device\USBSER000 -> COMxx
@@ -190,12 +193,17 @@ registre2->OpenKeyReadOnly("SYSTEM\\CurrentControlSet\\Services\\FTDIBUS\\Enum")
 //HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbser\Enum -> 0 -> USB\VID_1A86
 // pour ch340
 
+//HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CH341SER_A64\Enum -> 0 -> USB\VID_1A86
+// pour ch340 chinois
+
+
 //Arduino n°1 ; FTDI n°2
-if (registre1->ValueExists("0")||registre2->ValueExists("0"))
+if (registre1->ValueExists("0")||registre2->ValueExists("0")||registre3->ValueExists("0"))
 	{
 	EtatDetect = true;
 	if (registre1->ValueExists("0")) NumDetectedCard = 1;
-	if (registre2->ValueExists("0")) NumDetectedCard = 2;
+	if (registre2->ValueExists("0")) NumDetectedCard = 2;   
+	if (registre3->ValueExists("0")) NumDetectedCard = 3;
 	}
 	else
 		{
@@ -209,14 +217,15 @@ if (EtatDetectAvant != EtatDetect) {
 		{
 		InterfaceS2A->ImgConnect->Picture->LoadFromFile("unconnect.bmp");
 		InterfaceS2A->port=0;
-		break;
+		InterfaceS2A->Edit1->Clear();
+		InterfaceS2A->Edit1->Text=IntToStr(InterfaceS2A->port);
 		}
 	case 1:
 		{
 		//valable pour cartes Arduino seules
 		//test de la lecture de la valeur de la chaîne tronquée de 40 caractères
 		//à partir du 13ème pour ne garder que le VID
-		//ch340 port chinois, 2341 arduino, 2A03 leonardo 
+		//ch340 port chinois, 2341 arduino, 2A03 leonardo, 0403 duemilanove
 		//obligation de 2 tests pour minuscules compatibilité Windows XP
 		if (((registre1->ReadString("0").Delete(13,40))=="USB\\VID_2341")||
 			((registre1->ReadString("0").Delete(13,40))=="USB\\Vid_2341")||
@@ -225,14 +234,16 @@ if (EtatDetectAvant != EtatDetect) {
 			((registre1->ReadString("0").Delete(13,40))=="USB\\VID_1A86")||
 			((registre1->ReadString("0").Delete(13,40))=="USB\\Vid_1A86"))
 			{
-			TRegistry *registre3 = new TRegistry();
-			registre3->RootKey = HKEY_LOCAL_MACHINE;
+			TRegistry *registreCOM = new TRegistry();
+			registreCOM->RootKey = HKEY_LOCAL_MACHINE;
 			InterfaceS2A->ImgConnect->Picture->LoadFromFile("connect.bmp");
-			registre3->OpenKeyReadOnly("HARDWARE\\DEVICEMAP\\SERIALCOMM");
-			InterfaceS2A->port=StrToInt(registre3->ReadString("\\Device\\USBSER000").Delete(1,3));
-			delete registre3;
-			} 
-		break;
+			registreCOM->OpenKeyReadOnly("HARDWARE\\DEVICEMAP\\SERIALCOMM");
+			InterfaceS2A->port=StrToInt(registreCOM->ReadString("\\Device\\USBSER000").Delete(1,3));
+			InterfaceS2A->Edit1->Clear();
+			InterfaceS2A->Edit1->Text=IntToStr(InterfaceS2A->port);
+			InterfaceS2A->INI->WriteInteger("port COM", "port", InterfaceS2A->port);
+			delete registreCOM;
+			}
 		}
 	case 2:
 		{
@@ -240,23 +251,44 @@ if (EtatDetectAvant != EtatDetect) {
 		//test de la lecture de la valeur de la chaîne tronquée de 40 caractères
 		//à partir du 13ème pour ne garder que le VID
 		//obligation de 2 tests pour minuscules compatibilité Windows XP
-		if (((registre2->ReadString("0").Delete(13,50))=="USB\\VID_0403")||
-			((registre2->ReadString("0").Delete(13,50))=="USB\\Vid_0403"))
+		if (((registre2->ReadString("0").Delete(13,41))=="USB\\VID_0403")||
+			((registre2->ReadString("0").Delete(13,41))=="USB\\Vid_0403"))
 			{
-			TRegistry *registre3 = new TRegistry();
-			registre3->RootKey = HKEY_LOCAL_MACHINE;
+			TRegistry *registreCOM = new TRegistry();
+			registreCOM->RootKey = HKEY_LOCAL_MACHINE;
 			InterfaceS2A->ImgConnect->Picture->LoadFromFile("connect.bmp");
-			registre3->OpenKeyReadOnly("HARDWARE\\DEVICEMAP\\SERIALCOMM");
-			InterfaceS2A->port=StrToInt(registre3->ReadString("\\Device\\VCP0").Delete(1,3));
-			delete registre3;
-			}  
-		break;
+			registreCOM->OpenKeyReadOnly("HARDWARE\\DEVICEMAP\\SERIALCOMM");
+			InterfaceS2A->port=StrToInt(registreCOM->ReadString("\\Device\\VCP0").Delete(1,3));    
+			InterfaceS2A->Edit1->Clear();
+			InterfaceS2A->Edit1->Text=IntToStr(InterfaceS2A->port);
+			InterfaceS2A->INI->WriteInteger("port COM", "port", InterfaceS2A->port);
+			delete registreCOM;
+			}
+		}      
+	case 3:
+		{
+		//valable pour cartes Arduino seules
+		//test de la lecture de la valeur de la chaîne tronquée de 40 caractères
+		//à partir du 13ème pour ne garder que le VID
+		//ch340 port chinois, 2341 arduino, 2A03 leonardo, 0403 duemilanove 
+		//obligation de 2 tests pour minuscules compatibilité Windows XP
+		if (((registre3->ReadString("0").Delete(13,46))=="USB\\VID_1A86")||
+			((registre3->ReadString("0").Delete(13,46))=="USB\\Vid_1A86"))
+			{
+			TRegistry *registreCOM = new TRegistry();
+			registreCOM->RootKey = HKEY_LOCAL_MACHINE;
+			InterfaceS2A->ImgConnect->Picture->LoadFromFile("connect.bmp");
+			registreCOM->OpenKeyReadOnly("HARDWARE\\DEVICEMAP\\SERIALCOMM");
+			InterfaceS2A->port=StrToInt(registreCOM->ReadString("\\Device\\Serial2").Delete(1,3));     
+			InterfaceS2A->Edit1->Clear();
+			InterfaceS2A->Edit1->Text=IntToStr(InterfaceS2A->port);
+			InterfaceS2A->INI->WriteInteger("port COM", "port", InterfaceS2A->port);
+			delete registreCOM;
+			}
 		}
 	}
-	InterfaceS2A->Edit1->Clear();
-	InterfaceS2A->Edit1->Text=IntToStr(InterfaceS2A->port);
-	InterfaceS2A->INI->WriteInteger("port COM", "port", InterfaceS2A->port);
 	}
 delete registre1;
 delete registre2;
+delete registre3;
 }

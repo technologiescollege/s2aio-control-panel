@@ -121,6 +121,8 @@ __fastcall TInterfaceS2A::TInterfaceS2A(TComponent* Owner)
   Extensions2->Add(".url");
   Extensions2->Add(".html");
   Extensions2->Add(".htm");  
+  Extensions2->Add(".mp4");
+  Extensions2->Add(".avi");
   // Appel à SearchDocs, avec pour liste des fichiers les items de Documentation.
   SearchDocs(locate_doc, Extensions2, Docs,2);
   delete Extensions2;
