@@ -508,6 +508,9 @@ ShellExecute(0, 0, "explorer.exe", (ExtractFilePath(Application->ExeName) + "dri
 
 void __fastcall TInterfaceS2A::Edit1Change(TObject *Sender)     //évènement récupéré du thread de détection de carte
 {
+
+if (Edit1->Text=="0") ShowMessage(Popup->Items->Strings[5] + "\n" + Popup->Items->Strings[6] + "\n" + Popup->Items->Strings[7]);
+/*
 if (Edit1->Text == "1")
 	{
 	TRegistry *registre1 = new TRegistry();
@@ -544,6 +547,7 @@ if (Edit1->Text == "1")
 	delete registre1;
 	delete registre2;
 	}
+	*/
 }
 //valable seulement pour 1 carte Arduino, sinon incrémente...
 //HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbser\Enum -> 0 -> USB\VID_2341&PID_0042\6493633303735151D061

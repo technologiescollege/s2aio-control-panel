@@ -133,7 +133,8 @@ __fastcall TInterfaceS2A::TInterfaceS2A(TComponent* Owner)
   if(arg=="-i") InitINI();
   Environnement(INI->ReadInteger("BlocklyOUScratch", "BoS", false));  
 
-  ImgConnect->Picture->LoadFromFile("unconnect.bmp");
+  ImgConnect->Visible = false;
+  ImgUnconnect->Visible = true;
 
   TestCarte *ThreadTestArduino=new TestCarte(false);
 
@@ -328,7 +329,7 @@ ShellExecute(0, 0, ".\\aide\\4.pdf", 0, 0 , SW_SHOW );
 //---------------------------------------------------------------------------
 void __fastcall TInterfaceS2A::Wiki1Click(TObject *Sender)
 {
-ShellExecute(0, 0, "http://tic.technologiescollege.fr/wiki", 0, 0 , SW_SHOW );
+ShellExecute(0, 0, "http://info.technologiescollege.fr/wiki", 0, 0 , SW_SHOW );
 }
 //---------------------------------------------------------------------------
 void __fastcall TInterfaceS2A::Button2Click(TObject *Sender)

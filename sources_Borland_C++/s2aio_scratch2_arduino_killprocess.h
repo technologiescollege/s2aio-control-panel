@@ -13,6 +13,7 @@
 #include <Dialogs.hpp>
 #include <FileCtrl.hpp>
 #include <IniFiles.hpp>
+#include <Graphics.hpp>
 #include <string>
 #include "GestionLangue.h"
 //---------------------------------------------------------------------------
@@ -95,6 +96,7 @@ __published:	// Composants gérés par l'EDI
 	TMenuItem *N9;
 	TOpenDialog *Open_Arduino;
 	TMenuItem *DuemilanoveDiecimila328P1;
+	TImage *ImgUnconnect;
 	void __fastcall InitINI();
 	void __fastcall A_proposClick(TObject *Sender);
 	void __fastcall PrparerArduino1Click(TObject *Sender);

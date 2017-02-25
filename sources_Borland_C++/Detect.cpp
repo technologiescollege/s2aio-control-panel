@@ -179,13 +179,16 @@ EtatDetectAvant = EtatDetect;
 //scan registry for Arduino
 TRegistry *registre1 = new TRegistry();
 TRegistry *registre2 = new TRegistry();  
-TRegistry *registre3 = new TRegistry();
+TRegistry *registre3 = new TRegistry(); 
+TRegistry *registre4 = new TRegistry();
 registre1->RootKey = HKEY_LOCAL_MACHINE;
-registre2->RootKey = HKEY_LOCAL_MACHINE; 
-registre3->RootKey = HKEY_LOCAL_MACHINE;
+registre2->RootKey = HKEY_LOCAL_MACHINE;
+registre3->RootKey = HKEY_LOCAL_MACHINE;   
+registre4->RootKey = HKEY_LOCAL_MACHINE;
 registre1->OpenKeyReadOnly("SYSTEM\\CurrentControlSet\\Services\\usbser\\Enum");
 registre2->OpenKeyReadOnly("SYSTEM\\CurrentControlSet\\Services\\FTDIBUS\\Enum");  
-registre3->OpenKeyReadOnly("SYSTEM\\CurrentControlSet\\Services\\CH341SER_A64\\Enum");
+registre3->OpenKeyReadOnly("SYSTEM\\CurrentControlSet\\Services\\CH341SER_A64\\Enum");   
+registre4->OpenKeyReadOnly("SYSTEM\\CurrentControlSet\\Services\\silabser\\Enum");
 //valable seulement pour 1 carte Arduino, sinon incrémente...
 //HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbser\Enum -> 0 -> USB\VID_2341&PID_0042\6493633303735151D061
 //HKEY_LOCAL_MACHINE\HARDWARE\DEVICEMAP\SERIALCOMM -> \Device\USBSER000 -> COMxx
@@ -194,16 +197,21 @@ registre3->OpenKeyReadOnly("SYSTEM\\CurrentControlSet\\Services\\CH341SER_A64\\E
 // pour ch340
 
 //HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CH341SER_A64\Enum -> 0 -> USB\VID_1A86
-// pour ch340 chinois
+// pour ch340 chinois     
+
+//HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\silabser\Enum -> 0 -> USB\VID_10C4&PID_EA60\0001"
+//pour S4A EDU
+//http://www.dagurobot.com/goods.php?id=173
 
 
 //Arduino n°1 ; FTDI n°2
-if (registre1->ValueExists("0")||registre2->ValueExists("0")||registre3->ValueExists("0"))
+if (registre1->ValueExists("0")||registre2->ValueExists("0")||registre3->ValueExists("0")||registre4->ValueExists("0"))
 	{
 	EtatDetect = true;
 	if (registre1->ValueExists("0")) NumDetectedCard = 1;
-	if (registre2->ValueExists("0")) NumDetectedCard = 2;   
+	if (registre2->ValueExists("0")) NumDetectedCard = 2;
 	if (registre3->ValueExists("0")) NumDetectedCard = 3;
+	if (registre4->ValueExists("0")) NumDetectedCard = 4;
 	}
 	else
 		{
@@ -279,7 +287,27 @@ if (EtatDetectAvant != EtatDetect) {
 			registreCOM->RootKey = HKEY_LOCAL_MACHINE;
 			InterfaceS2A->ImgConnect->Picture->LoadFromFile("connect.bmp");
 			registreCOM->OpenKeyReadOnly("HARDWARE\\DEVICEMAP\\SERIALCOMM");
-			InterfaceS2A->port=StrToInt(registreCOM->ReadString("\\Device\\Serial2").Delete(1,3));     
+			InterfaceS2A->port=StrToInt(registreCOM->ReadString("\\Device\\Serial2").Delete(1,3));
+			InterfaceS2A->Edit1->Clear();
+			InterfaceS2A->Edit1->Text=IntToStr(InterfaceS2A->port);
+			InterfaceS2A->INI->WriteInteger("port COM", "port", InterfaceS2A->port);
+			delete registreCOM;
+			}
+		}  
+	case 4:
+		{
+		//valable pour cartes Arduino seules
+		//test de la lecture de la valeur de la chaîne tronquée de 40 caractères
+		//à partir du 13ème pour ne garder que le VID
+		//obligation de 2 tests pour minuscules compatibilité Windows XP
+		if (((registre4->ReadString("0").Delete(13,40))=="USB\\VID_10C4")||
+			((registre4->ReadString("0").Delete(13,40))=="USB\\Vid_10c4"))
+			{
+			TRegistry *registreCOM = new TRegistry();
+			registreCOM->RootKey = HKEY_LOCAL_MACHINE;
+			InterfaceS2A->ImgConnect->Picture->LoadFromFile("connect.bmp");
+			registreCOM->OpenKeyReadOnly("HARDWARE\\DEVICEMAP\\SERIALCOMM");
+			InterfaceS2A->port=StrToInt(registreCOM->ReadString("\\Device\\Silabser0").Delete(1,3));
 			InterfaceS2A->Edit1->Clear();
 			InterfaceS2A->Edit1->Text=IntToStr(InterfaceS2A->port);
 			InterfaceS2A->INI->WriteInteger("port COM", "port", InterfaceS2A->port);
@@ -290,5 +318,6 @@ if (EtatDetectAvant != EtatDetect) {
 	}
 delete registre1;
 delete registre2;
-delete registre3;
+delete registre3;        
+delete registre4;
 }
